@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema Simples de Gerenciamento de Academia desenvolvido para a disciplina de Engenharia de Software.">
+  <title>FitZone Pro - Sistema de Gerenciamento de Academia</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos da Aplicação -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Raiz da Aplicação (renderiza tela de login ou sistema principal) -->
+  <div id="app-root"></div>
+
+  <!-- Modal Global para Formulários e Confirmações de CRUD -->
+  <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Título do Modal</h3>
+        <button id="modal-close-btn" class="modal-close-btn" type="button" aria-label="Fechar">&times;</button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Conteúdo dinâmico -->
+      </div>
+      <div id="modal-footer" class="modal-footer">
+        <!-- Botões de ação dinâmicos -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de Notificações Toast -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- 1. Camada de Dados e Persistência -->
+  <script src="js/storage/db.js"></script>
+
+  <!-- 2. Utilitários e Componentes Visuais Base -->
+  <script src="js/ui/formatters.js"></script>
+  <script src="js/ui/notification.js"></script>
+  <script src="js/ui/modal.js"></script>
+
+  <!-- 3. Camada de Regras de Negócio e Serviços (Services) -->
+  <script src="js/services/authService.js"></script>
+  <script src="js/services/alunoService.js"></script>
+  <script src="js/services/professorService.js"></script>
+  <script src="js/services/planoService.js"></script>
+  <script src="js/services/matriculaService.js"></script>
+  <script src="js/services/pagamentoService.js"></script>
+
+  <!-- 4. Camada de Apresentação (Views) -->
+  <script src="js/ui/views.js"></script>
+
+  <!-- 5. Controlador Principal e Rotas -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
